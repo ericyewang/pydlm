@@ -163,7 +163,7 @@ class kalmanFilter:
 
         # when y is missing, then we update the status by the predicted results
         else:
-            # we do not update the model.predict.step because we need to take of the case
+            # we do not update the model.predict.step because we need to take care of the case
             # [5, None, None, None]. In such case, we do not add more innovation, because
             # no information is comming in.
             # This is correct because
