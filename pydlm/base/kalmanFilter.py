@@ -5,7 +5,7 @@ Base code for running Kalman filter
 
 ===============================================
 
-This module implements a Kalman filter that is slightly different fromt the 
+This module implements a Kalman filter that is slightly different from the
 standard one, following West and Harrison (1999). This Kalman filter accepts
 one-dimension discounting factor to adaptively learn the innovation matrix
 itself, instead of accepting it from the user. (Although such option is still
@@ -20,7 +20,7 @@ import pydlm.base.tools as tl
 # backward smoother and backward sampler for one-step move
 
 class kalmanFilter:
-    """ The kalmanFilter class the provide the basic functionalities
+    """ The kalmanFilter class that provides the basic functionalities
 
     Attributes:
         discount: the discounting factor determining how much information to carry on
@@ -125,7 +125,7 @@ class kalmanFilter:
         if dealWithMissingEvaluation:
             loc = self._modifyTransitionAccordingToMissingValue(model)
 
-        # since we have delt with the missing value, we don't need to double treat it.
+        # since we have dealt with the missing value, we don't need to double treat it.
         self.predict(model, dealWithMissingEvaluation = False)
         
         # when y is not a missing data
@@ -133,7 +133,7 @@ class kalmanFilter:
             
             # first obtain the predicted status
             # we make the prediction step equal to 0 to ensure the prediction
-            # is based on the model state and innovation is updated correctlly
+            # is based on the model state and innovation is updated correctly
             # model.prediction.step = 0
             model.prediction.step = 0
         
